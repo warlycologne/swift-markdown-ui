@@ -10,6 +10,7 @@ enum BlockNode: Hashable {
   case paragraph(content: [InlineNode])
   case heading(level: Int, content: [InlineNode])
   case table(columnAlignments: [RawTableColumnAlignment], rows: [RawTableRow])
+  case custom(CustomBlockNode)
   case thematicBreak
 }
 

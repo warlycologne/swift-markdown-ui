@@ -330,6 +330,7 @@ extension UnsafeNode {
         cmark_gfm_extensions_set_table_row_is_header(header, 1)
       }
       return node
+    case .custom: return nil
     case .thematicBreak:
       guard let node = cmark_node_new(CMARK_NODE_THEMATIC_BREAK) else { return nil }
       return node
